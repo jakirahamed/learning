@@ -3,8 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:learning/page/cart/cart.dart';
 import 'package:learning/page/featured/drower.dart';
 import 'package:learning/page/featured/local/categories_chip.dart';
-
-import '../../widget/custom_card.dart';
+import 'package:learning/page/featured/local/featured_product.dart';
+import 'package:learning/page/featured/local/top_product.dart';
+import 'local/all_product.dart';
 import 'local/slider.dart';
 
 class FeaturedPage extends ConsumerWidget {
@@ -39,30 +40,9 @@ class FeaturedPage extends ConsumerWidget {
                   style: Theme.of(context).textTheme.headline6,
                 ),
               ),
-              SingleChildScrollView(
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: const [
-                    custom_product_card(
-                      title: 'title is here',
-                      teachername: 'Teacher name',
-                      reting: 'Reting',
-                      price: 'Price : 2041',
-                    ),
-                    custom_product_card(
-                      title: 'title is here',
-                      teachername: 'Teacher name',
-                      reting: 'Reting',
-                      price: 'Price : 2041',
-                    ),
-                    custom_product_card(
-                      title: 'title is here',
-                      teachername: 'Teacher name',
-                      reting: 'Reting',
-                      price: 'Price : 2041',
-                    ),
-                  ],
-                ),
+                child: FeaturedProduct(),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -89,30 +69,9 @@ class FeaturedPage extends ConsumerWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              SingleChildScrollView(
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: const [
-                    custom_product_card(
-                      title: 'title is here',
-                      teachername: 'Teacher name',
-                      reting: 'Reting',
-                      price: 'Price : 2041',
-                    ),
-                    custom_product_card(
-                      title: 'title is here',
-                      teachername: 'Teacher name',
-                      reting: 'Reting',
-                      price: 'Price : 2041',
-                    ),
-                    custom_product_card(
-                      title: 'title is here',
-                      teachername: 'Teacher name',
-                      reting: 'Reting',
-                      price: 'Price : 2041',
-                    ),
-                  ],
-                ),
+                child: TopProduct(),
               ),
               const SizedBox(height: 10),
               Center(
@@ -122,6 +81,7 @@ class FeaturedPage extends ConsumerWidget {
                 ),
               ),
               const SizedBox(height: 10),
+              const AllProduct(),
             ],
           ),
         ),
