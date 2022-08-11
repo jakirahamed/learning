@@ -12,6 +12,7 @@ class ProductModel {
   final String requirements;
   final String description;
   final String img;
+  final String categories;
   ProductModel({
     required this.title,
     required this.authername,
@@ -24,6 +25,7 @@ class ProductModel {
     required this.requirements,
     required this.description,
     required this.img,
+    required this.categories,
   });
 
   ProductModel copyWith({
@@ -38,6 +40,7 @@ class ProductModel {
     String? requirements,
     String? description,
     String? img,
+    String? categories,
   }) {
     return ProductModel(
       title: title ?? this.title,
@@ -51,6 +54,7 @@ class ProductModel {
       requirements: requirements ?? this.requirements,
       description: description ?? this.description,
       img: img ?? this.img,
+      categories: categories ?? this.categories,
     );
   }
 
@@ -67,6 +71,7 @@ class ProductModel {
       'requirements': requirements,
       'description': description,
       'img': img,
+      'categories': categories,
     };
   }
 
@@ -83,6 +88,7 @@ class ProductModel {
       requirements: doc['requirements'] as String,
       description: doc['description'] as String,
       img: doc['img'] as String,
+      categories: doc['categories'] as String,
     );
   }
 }
