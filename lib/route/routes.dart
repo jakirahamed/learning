@@ -4,7 +4,6 @@ import 'package:learning/page/account/account.dart';
 import 'package:learning/page/bottom_nav.dart';
 import 'package:learning/page/cart/cart.dart';
 import 'package:learning/page/featured/featured.dart';
-import 'package:learning/page/mylearing/mylearning.dart';
 import 'package:learning/page/note_info.dart';
 import 'package:learning/page/search/search.dart';
 import 'package:learning/page/wishlist/wishlist.dart';
@@ -25,10 +24,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const SearchPage(),
         );
-      case MyLearningPage.routeName:
-        return MaterialPageRoute(
-          builder: (context) => const MyLearningPage(),
-        );
+      // case MyLearningPage.routeName:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const MyLearningPage(),
+      //   );
       case WishlistPage.routeName:
         return MaterialPageRoute(
           builder: (context) => const WishlistPage(),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:learning/firebase_options.dart';
-import 'package:learning/route/routes.dart';
+import 'package:learning/page/mylearing/mylearning.dart';
 import 'package:learning/theme/theme.dart';
 
 void main() async {
@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: AppTheme.darkTheme,
       builder: EasyLoading.init(),
-      // home: const HomePage(),
-      onGenerateRoute: Routes.generate,
+      home: SamplePlayer(),
+      // onGenerateRoute: Routes.generate,
     );
   }
 }

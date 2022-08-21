@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:learning/page/account/account.dart';
 import 'package:learning/page/cart/cart.dart';
 import 'package:learning/page/featured/featured.dart';
-import 'package:learning/page/mylearing/mylearning.dart';
 import 'package:learning/page/search/search.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -17,7 +16,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   List pages = [
     const FeaturedPage(),
     const SearchPage(),
-    const MyLearningPage(),
+    // const MyLearningPage(),
     const CartPage(),
     const AccountPage(),
   ];

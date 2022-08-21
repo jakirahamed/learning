@@ -1,12 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flick_video_player/flick_video_player.dart';
+import 'package:video_player/video_player.dart';
 
-class MyLearningPage extends StatelessWidget {
-  const MyLearningPage({Key? key}) : super(key: key);
-  static const String routeName = '/mylearningpage';
+class SamplePlayer extends StatefulWidget {
+  const SamplePlayer({Key? key}) : super(key: key);
+
+  @override
+  _SamplePlayerState createState() => _SamplePlayerState();
+}
+
+class _SamplePlayerState extends State<SamplePlayer> {
+  late FlickManager flickManager;
+  @override
+  void initState() {
+    super.initState();
+    flickManager = FlickManager(
+      videoPlayerController:
+          VideoPlayerController.network("apps promo With Music.mp4"),
+    );
+  }
+
+  @override
+  void dispose() {
+    flickManager.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
+    return Container(
+      child: FlickVideoPlayer(flickManager: flickManager),
     );
   }
 }
