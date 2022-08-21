@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: AppTheme.darkTheme,
       builder: EasyLoading.init(),
-      home: SamplePlayer(),
+      home: PlayerTest(),
       // onGenerateRoute: Routes.generate,
     );
   }
